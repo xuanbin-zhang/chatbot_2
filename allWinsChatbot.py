@@ -47,14 +47,14 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
     with gr.Row(elem_id="float-display"):
         user_info = gr.Markdown(
             value="getting user info...", elem_id="user-info")
-        update_info = gr.HTML(get_html("update.html").format(
-            current_version=repo_tag_html(),
-            version_time=version_time(),
-            cancel_btn=i18n("取消"),
-            update_btn=i18n("更新"),
-            seenew_btn=i18n("详情"),
-            ok_btn=i18n("好"),
-        ), visible=check_update)
+        # update_info = gr.HTML(get_html("update.html").format(
+        #     current_version=repo_tag_html(),
+        #     version_time=version_time(),
+        #     cancel_btn=i18n("取消"),
+        #     update_btn=i18n("更新"),
+        #     seenew_btn=i18n("详情"),
+        #     ok_btn=i18n("好"),
+        # ), visible=check_update)
 
     with gr.Row(equal_height=True, elem_id="allwins-body"):
 
@@ -186,7 +186,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                                     dislikeBtn = gr.Button(
                                         i18n("👎"), elem_id="gr-dislike-btn")
 
-        with gr.Column(elem_id="toolbox-area", scale=1, style={"display": "none"}):
+        with gr.Column(elem_id="toolbox-area", scale=1):
             # For CSS setting, there is an extra box. Don't remove it.
             with gr.Box(elem_id="allwins-toolbox"):
                 with gr.Row():

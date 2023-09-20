@@ -186,144 +186,144 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                                     dislikeBtn = gr.Button(
                                         i18n("👎"), elem_id="gr-dislike-btn")
 
-        # with gr.Column(elem_id="toolbox-area", scale=1):
-        #     # For CSS setting, there is an extra box. Don't remove it.
-        #     with gr.Box(elem_id="allwins-toolbox"):
-        #         with gr.Row():
-        #             gr.Markdown("## "+i18n("工具箱"))
-        #             gr.HTML(get_html("close_btn.html").format(
-        #                 obj="toolbox"), elem_classes="close-btn")
-        #         with gr.Tabs(elem_id="allwins-toolbox-tabs"):
-        #             with gr.Tab(label=i18n("对话")):
-        #                 with gr.Accordion(label="Prompt", open=True):
-        #                     systemPromptTxt = gr.Textbox(
-        #                         show_label=True,
-        #                         placeholder=i18n("在这里输入System Prompt..."),
-        #                         label="System prompt",
-        #                         value=INITIAL_SYSTEM_PROMPT,
-        #                         lines=8
-        #                     )
-        #                     with gr.Accordion(label=i18n("加载Prompt模板"), open=False):
-        #                         with gr.Column():
-        #                             with gr.Row():
-        #                                 with gr.Column(scale=6):
-        #                                     templateFileSelectDropdown = gr.Dropdown(
-        #                                         label=i18n("选择Prompt模板集合文件"),
-        #                                         choices=get_template_names(),
-        #                                         multiselect=False,
-        #                                         value=get_template_names()[0],
-        #                                         container=False,
-        #                                     )
-        #                                 with gr.Column(scale=1):
-        #                                     templateRefreshBtn = gr.Button(
-        #                                         i18n("🔄 刷新"))
-        #                             with gr.Row():
-        #                                 with gr.Column():
-        #                                     templateSelectDropdown = gr.Dropdown(
-        #                                         label=i18n("从Prompt模板中加载"),
-        #                                         choices=load_template(
-        #                                             get_template_names()[
-        #                                                 0], mode=1
-        #                                         ),
-        #                                         multiselect=False,
-        #                                         container=False,
-        #                                     )
-        #                 gr.Markdown("---", elem_classes="hr-line")
-        #                 with gr.Accordion(label=i18n("知识库"), open=True):
-        #                     use_websearch_checkbox = gr.Checkbox(label=i18n(
-        #                         "使用在线搜索"), value=False, elem_classes="switch-checkbox", elem_id="gr-websearch-cb", visible=False)
-        #                     index_files = gr.Files(label=i18n(
-        #                         "上传"), type="file", elem_id="upload-index-file")
-        #                     two_column = gr.Checkbox(label=i18n(
-        #                         "双栏pdf"), value=advance_docs["pdf"].get("two_column", False))
-        #                     summarize_btn = gr.Button(i18n("总结"))
-        #                     # TODO: 公式ocr
-        #                     # formula_ocr = gr.Checkbox(label=i18n("识别公式"), value=advance_docs["pdf"].get("formula_ocr", False))
+        with gr.Column(elem_id="toolbox-area", scale=1):
+            # For CSS setting, there is an extra box. Don't remove it.
+            with gr.Box(elem_id="allwins-toolbox"):
+                with gr.Row():
+                    gr.Markdown("## "+i18n("工具箱"))
+                    gr.HTML(get_html("close_btn.html").format(
+                        obj="toolbox"), elem_classes="close-btn")
+                with gr.Tabs(elem_id="allwins-toolbox-tabs"):
+                    with gr.Tab(label=i18n("对话")):
+                        with gr.Accordion(label="Prompt", open=True):
+                            systemPromptTxt = gr.Textbox(
+                                show_label=True,
+                                placeholder=i18n("在这里输入System Prompt..."),
+                                label="System prompt",
+                                value=INITIAL_SYSTEM_PROMPT,
+                                lines=8
+                            )
+                            with gr.Accordion(label=i18n("加载Prompt模板"), open=False):
+                                with gr.Column():
+                                    with gr.Row():
+                                        with gr.Column(scale=6):
+                                            templateFileSelectDropdown = gr.Dropdown(
+                                                label=i18n("选择Prompt模板集合文件"),
+                                                choices=get_template_names(),
+                                                multiselect=False,
+                                                value=get_template_names()[0],
+                                                container=False,
+                                            )
+                                        with gr.Column(scale=1):
+                                            templateRefreshBtn = gr.Button(
+                                                i18n("🔄 刷新"))
+                                    with gr.Row():
+                                        with gr.Column():
+                                            templateSelectDropdown = gr.Dropdown(
+                                                label=i18n("从Prompt模板中加载"),
+                                                choices=load_template(
+                                                    get_template_names()[
+                                                        0], mode=1
+                                                ),
+                                                multiselect=False,
+                                                container=False,
+                                            )
+                        gr.Markdown("---", elem_classes="hr-line")
+                        with gr.Accordion(label=i18n("知识库"), open=True):
+                            use_websearch_checkbox = gr.Checkbox(label=i18n(
+                                "使用在线搜索"), value=False, elem_classes="switch-checkbox", elem_id="gr-websearch-cb", visible=False)
+                            index_files = gr.Files(label=i18n(
+                                "上传"), type="file", elem_id="upload-index-file")
+                            two_column = gr.Checkbox(label=i18n(
+                                "双栏pdf"), value=advance_docs["pdf"].get("two_column", False))
+                            summarize_btn = gr.Button(i18n("总结"))
+                            # TODO: 公式ocr
+                            # formula_ocr = gr.Checkbox(label=i18n("识别公式"), value=advance_docs["pdf"].get("formula_ocr", False))
 
-        #             with gr.Tab(label=i18n("参数")):
-        #                 gr.Markdown(i18n("# ⚠️ 务必谨慎更改 ⚠️"),
-        #                             elem_id="advanced-warning")
-        #                 with gr.Accordion(i18n("参数"), open=True):
-        #                     temperature_slider = gr.Slider(
-        #                         minimum=-0,
-        #                         maximum=2.0,
-        #                         value=1.0,
-        #                         step=0.1,
-        #                         interactive=True,
-        #                         label="temperature",
-        #                     )
-        #                     top_p_slider = gr.Slider(
-        #                         minimum=-0,
-        #                         maximum=1.0,
-        #                         value=1.0,
-        #                         step=0.05,
-        #                         interactive=True,
-        #                         label="top-p",
-        #                     )
-        #                     n_choices_slider = gr.Slider(
-        #                         minimum=1,
-        #                         maximum=10,
-        #                         value=1,
-        #                         step=1,
-        #                         interactive=True,
-        #                         label="n choices",
-        #                     )
-        #                     stop_sequence_txt = gr.Textbox(
-        #                         show_label=True,
-        #                         placeholder=i18n("停止符，用英文逗号隔开..."),
-        #                         label="stop",
-        #                         value="",
-        #                         lines=1,
-        #                     )
-        #                     max_context_length_slider = gr.Slider(
-        #                         minimum=1,
-        #                         maximum=32768,
-        #                         value=2000,
-        #                         step=1,
-        #                         interactive=True,
-        #                         label="max context",
-        #                     )
-        #                     max_generation_slider = gr.Slider(
-        #                         minimum=1,
-        #                         maximum=32768,
-        #                         value=1000,
-        #                         step=1,
-        #                         interactive=True,
-        #                         label="max generations",
-        #                     )
-        #                     presence_penalty_slider = gr.Slider(
-        #                         minimum=-2.0,
-        #                         maximum=2.0,
-        #                         value=0.0,
-        #                         step=0.01,
-        #                         interactive=True,
-        #                         label="presence penalty",
-        #                     )
-        #                     frequency_penalty_slider = gr.Slider(
-        #                         minimum=-2.0,
-        #                         maximum=2.0,
-        #                         value=0.0,
-        #                         step=0.01,
-        #                         interactive=True,
-        #                         label="frequency penalty",
-        #                     )
-        #                     logit_bias_txt = gr.Textbox(
-        #                         show_label=True,
-        #                         placeholder=f"word:likelihood",
-        #                         label="logit bias",
-        #                         value="",
-        #                         lines=1,
-        #                     )
-        #                     user_identifier_txt = gr.Textbox(
-        #                         show_label=True,
-        #                         placeholder=i18n("用于定位滥用行为"),
-        #                         label=i18n("用户名"),
-        #                         value=user_name.value,
-        #                         lines=1,
-        #                     )
-        #             with gr.Tab(label=i18n("拓展")):
-        #                 gr.Markdown(
-        #                     "Will be here soon...\n(We hope)\n\nAnd we hope you can help us to make more extensions!")
+                    with gr.Tab(label=i18n("参数")):
+                        gr.Markdown(i18n("# ⚠️ 务必谨慎更改 ⚠️"),
+                                    elem_id="advanced-warning")
+                        with gr.Accordion(i18n("参数"), open=True):
+                            temperature_slider = gr.Slider(
+                                minimum=-0,
+                                maximum=2.0,
+                                value=1.0,
+                                step=0.1,
+                                interactive=True,
+                                label="temperature",
+                            )
+                            top_p_slider = gr.Slider(
+                                minimum=-0,
+                                maximum=1.0,
+                                value=1.0,
+                                step=0.05,
+                                interactive=True,
+                                label="top-p",
+                            )
+                            n_choices_slider = gr.Slider(
+                                minimum=1,
+                                maximum=10,
+                                value=1,
+                                step=1,
+                                interactive=True,
+                                label="n choices",
+                            )
+                            stop_sequence_txt = gr.Textbox(
+                                show_label=True,
+                                placeholder=i18n("停止符，用英文逗号隔开..."),
+                                label="stop",
+                                value="",
+                                lines=1,
+                            )
+                            max_context_length_slider = gr.Slider(
+                                minimum=1,
+                                maximum=32768,
+                                value=2000,
+                                step=1,
+                                interactive=True,
+                                label="max context",
+                            )
+                            max_generation_slider = gr.Slider(
+                                minimum=1,
+                                maximum=32768,
+                                value=1000,
+                                step=1,
+                                interactive=True,
+                                label="max generations",
+                            )
+                            presence_penalty_slider = gr.Slider(
+                                minimum=-2.0,
+                                maximum=2.0,
+                                value=0.0,
+                                step=0.01,
+                                interactive=True,
+                                label="presence penalty",
+                            )
+                            frequency_penalty_slider = gr.Slider(
+                                minimum=-2.0,
+                                maximum=2.0,
+                                value=0.0,
+                                step=0.01,
+                                interactive=True,
+                                label="frequency penalty",
+                            )
+                            logit_bias_txt = gr.Textbox(
+                                show_label=True,
+                                placeholder=f"word:likelihood",
+                                label="logit bias",
+                                value="",
+                                lines=1,
+                            )
+                            user_identifier_txt = gr.Textbox(
+                                show_label=True,
+                                placeholder=i18n("用于定位滥用行为"),
+                                label=i18n("用户名"),
+                                value=user_name.value,
+                                lines=1,
+                            )
+                    with gr.Tab(label=i18n("拓展")):
+                        gr.Markdown(
+                            "Will be here soon...\n(We hope)\n\nAnd we hope you can help us to make more extensions!")
 
                     # changeAPIURLBtn = gr.Button(i18n("🔄 切换API地址"))
 

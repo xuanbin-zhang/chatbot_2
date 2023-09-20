@@ -44,17 +44,17 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
         gr.HTML(get_html("header_title.html").format(
             app_title=allwins_TITLE), elem_id="app-title")
         status_display = gr.Markdown(get_geoip(), elem_id="status-display")
-    with gr.Row(elem_id="float-display"):
+    with gr.Row(elem_id="float-display", style={"display": "none"}):
         user_info = gr.Markdown(
             value="getting user info...", elem_id="user-info")
-        # update_info = gr.HTML(get_html("update.html").format(
-        #     current_version=repo_tag_html(),
-        #     version_time=version_time(),
-        #     cancel_btn=i18n("取消"),
-        #     update_btn=i18n("更新"),
-        #     seenew_btn=i18n("详情"),
-        #     ok_btn=i18n("好"),
-        # ), visible=check_update)
+        update_info = gr.HTML(get_html("update.html").format(
+            current_version=repo_tag_html(),
+            version_time=version_time(),
+            cancel_btn=i18n("取消"),
+            update_btn=i18n("更新"),
+            seenew_btn=i18n("详情"),
+            ok_btn=i18n("好"),
+        ), visible=check_update)
 
     with gr.Row(equal_height=True, elem_id="allwins-body"):
 

@@ -60,31 +60,31 @@ function addallwinsButton(botElement) {
     });
     // botElement.appendChild(copyButton);
 
-    // Toggle button
-    var toggleButton = document.createElement('button');
-    toggleButton.classList.add('allwins-btn');
-    toggleButton.classList.add('toggle-md-btn');
-    toggleButton.setAttribute('aria-label', 'Toggle');
-    var renderMarkdown = mdMessage.classList.contains('hideM');
-    toggleButton.innerHTML = renderMarkdown ? mdIcon : rawIcon;
-    toggleButton.addEventListener('click', () => {
-        renderMarkdown = mdMessage.classList.contains('hideM');
-        if (renderMarkdown) {
-            renderMarkdownText(botElement);
-            toggleButton.innerHTML=rawIcon;
-        } else {
-            removeMarkdownText(botElement);
-            toggleButton.innerHTML=mdIcon;
-        }
-        chatbotContentChanged(1); // to set md or raw in read-only history html
-    });
-    // botElement.insertBefore(toggleButton, copyButton);
+    // // Toggle button
+    // var toggleButton = document.createElement('button');
+    // toggleButton.classList.add('allwins-btn');
+    // toggleButton.classList.add('toggle-md-btn');
+    // toggleButton.setAttribute('aria-label', 'Toggle');
+    // var renderMarkdown = mdMessage.classList.contains('hideM');
+    // toggleButton.innerHTML = renderMarkdown ? mdIcon : rawIcon;
+    // toggleButton.addEventListener('click', () => {
+    //     renderMarkdown = mdMessage.classList.contains('hideM');
+    //     if (renderMarkdown) {
+    //         renderMarkdownText(botElement);
+    //         toggleButton.innerHTML=rawIcon;
+    //     } else {
+    //         removeMarkdownText(botElement);
+    //         toggleButton.innerHTML=mdIcon;
+    //     }
+    //     chatbotContentChanged(1); // to set md or raw in read-only history html
+    // });
+    // // botElement.insertBefore(toggleButton, copyButton);
 
-    var messageBtnColumn = document.createElement('div');
-    messageBtnColumn.classList.add('message-btn-column');
-    messageBtnColumn.appendChild(toggleButton);
-    messageBtnColumn.appendChild(copyButton);
-    botElement.appendChild(messageBtnColumn);
+    // var messageBtnColumn = document.createElement('div');
+    // messageBtnColumn.classList.add('message-btn-column');
+    // messageBtnColumn.appendChild(toggleButton);
+    // messageBtnColumn.appendChild(copyButton);
+    // botElement.appendChild(messageBtnColumn);
 
     function renderMarkdownText(message) {
         var mdDiv = message.querySelector('.md-message');

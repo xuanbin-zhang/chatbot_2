@@ -793,12 +793,17 @@ demo.title = i18n("川虎Chat 🚀")
 
 if __name__ == "__main__":
     reload_javascript()
+    username = "linou"
+    password = "linou518"
+    auth = (username, password)
+
     demo.queue(concurrency_count=CONCURRENT_COUNT).launch(
         blocked_paths=["config.json"],
-        server_name=server_name,
+        server_name="0.0.0.0",
         server_port=server_port,
         share=share,
-        auth=auth_from_conf if authflag else None,
+        #auth=auth_from_conf if authflag else None,
+        auth=auth,
         favicon_path="./web_assets/favicon.ico",
         inbrowser=not dockerflag,  # 禁止在docker下开启inbrowser
     )

@@ -364,7 +364,7 @@ class BaseLLMModel:
                     real_inputs)
             reference_results = [[d.page_content.strip("�"), os.path.basename(
                 d.metadata["source"])] for d in relevant_documents]
-            reference_results = add_source_numbers(reference_results)
+            reference_results = # add_source_numbers(reference_results)  # Commented out to remove references
             display_append = add_details(reference_results)
             display_append = "\n\n" + "".join(display_append)
             real_inputs = (
@@ -388,7 +388,7 @@ class BaseLLMModel:
                     # f"{idx+1}. [{domain_name}]({result['href']})\n"
                     f"<a href=\"{result['href']}\" target=\"_blank\">{idx+1}.&nbsp;{result['title']}</a>"
                 )
-            reference_results = add_source_numbers(reference_results)
+            reference_results = # add_source_numbers(reference_results)  # Commented out to remove references
             # display_append = "<ol>\n\n" + "".join(display_append) + "</ol>"
             display_append = '<div class = "source-a">' + \
                 "".join(display_append) + '</div>'

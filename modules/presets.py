@@ -45,8 +45,35 @@ INDEX_QUERY_TEMPRATURE = 1.0
 
 allwins_TITLE = i18n("allwinsChat ")
 
-allwins_DESCRIPTION = i18n("由Bilibili [土allwins虎虎](https://space.bilibili.com/29125536)、[明昭MZhao](https://space.bilibili.com/24807452) 和 [Keldos](https://github.com/Keldos-Li) 开发<br />访问allwinsChat的 [GitHub项目](https://github.com/GaiZhenbiao/allwinsChatGPT) 下载最新版脚本")
+#allwins_DESCRIPTION = i18n("由Bilibili [土allwins虎虎](https://space.bilibili.com/29125536)、[明昭MZhao](https://space.bilibili.com/24807452) 和 [Keldos](https://github.com/Keldos-Li) 开发<br />访问allwinsChat的 [GitHub项目](https://github.com/GaiZhenbiao/allwinsChatGPT) 下载最新版脚本")
 
+
+# ONLINE_MODELS = [
+#     "gpt-3.5-turbo",
+#     "gpt-3.5-turbo-16k",
+#     "gpt-3.5-turbo-0301",
+#     "gpt-3.5-turbo-0613",
+#     "gpt-4",
+#     "gpt-4-0314",
+#     "gpt-4-0613",
+#     "gpt-4-32k",
+#     "gpt-4-32k-0314",
+#     "gpt-4-32k-0613",
+#     "allwins助理",
+#     "allwins助理 Pro",
+#     "GooglePaLM",
+#     "xmchat",
+#     "Azure OpenAI",
+#     "yuanai-1.0-base_10B",
+#     "yuanai-1.0-translate",
+#     "yuanai-1.0-dialog",
+#     "yuanai-1.0-rhythm_poems",
+#     "minimax-abab4-chat",
+#     "minimax-abab5-chat",
+#     "midjourney",
+#     "讯飞星火大模型V2.0",
+#     "讯飞星火大模型V1.5"
+# ]
 
 ONLINE_MODELS = [
     "gpt-3.5-turbo",
@@ -58,22 +85,9 @@ ONLINE_MODELS = [
     "gpt-4-0613",
     "gpt-4-32k",
     "gpt-4-32k-0314",
-    "gpt-4-32k-0613",
-    "allwins助理",
-    "allwins助理 Pro",
-    "GooglePaLM",
-    "xmchat",
-    "Azure OpenAI",
-    "yuanai-1.0-base_10B",
-    "yuanai-1.0-translate",
-    "yuanai-1.0-dialog",
-    "yuanai-1.0-rhythm_poems",
-    "minimax-abab4-chat",
-    "minimax-abab5-chat",
-    "midjourney",
-    "讯飞星火大模型V2.0",
-    "讯飞星火大模型V1.5"
+    "gpt-4-32k-0613"
 ]
+
 
 LOCAL_MODELS = [
     "chatglm-6b",

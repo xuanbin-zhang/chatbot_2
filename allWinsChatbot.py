@@ -362,7 +362,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                             label=i18n("选择回复语言（针对搜索&索引功能）"),
                             choices=REPLY_LANGUAGES,
                             multiselect=False,
-                            value=REPLY_LANGUAGES[0],
+                            value=REPLY_LANGUAGES[3],
                         )
 
                     with gr.Tab(label=i18n("高级")):

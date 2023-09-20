@@ -186,7 +186,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                                     dislikeBtn = gr.Button(
                                         i18n("👎"), elem_id="gr-dislike-btn")
 
-        with gr.Column(elem_id="toolbox-area", scale=1):
+        with gr.Column(elem_id="toolbox-area", scale=1, style={"display": "none"}):
             # For CSS setting, there is an extra box. Don't remove it.
             with gr.Box(elem_id="allwins-toolbox"):
                 with gr.Row():
@@ -234,9 +234,9 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                                 "使用在线搜索"), value=False, elem_classes="switch-checkbox", elem_id="gr-websearch-cb", visible=False)
                             index_files = gr.Files(label=i18n(
                                 "上传"), type="file", elem_id="upload-index-file")
-                            two_column = gr.Checkbox(label=i18n(
-                                "双栏pdf"), value=advance_docs["pdf"].get("two_column", False))
-                            summarize_btn = gr.Button(i18n("总结"))
+                            # two_column = gr.Checkbox(label=i18n(
+                            #     "双栏pdf"), value=advance_docs["pdf"].get("two_column", False))
+                            # summarize_btn = gr.Button(i18n("总结"))
                             # TODO: 公式ocr
                             # formula_ocr = gr.Checkbox(label=i18n("识别公式"), value=advance_docs["pdf"].get("formula_ocr", False))
 
@@ -577,8 +577,8 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
 
     index_files.change(handle_file_upload, [current_model, index_files, chatbot, language_select_dropdown], [
                        index_files, chatbot, status_display])
-    summarize_btn.click(handle_summarize_index, [
-                        current_model, index_files, chatbot, language_select_dropdown], [chatbot, status_display])
+    # summarize_btn.click(handle_summarize_index, [
+    #                     current_model, index_files, chatbot, language_select_dropdown], [chatbot, status_display])
 
     emptyBtn.click(
         reset,
@@ -630,7 +630,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
         show_progress=False
     )
 
-    two_column.change(update_doc_config, [two_column], None)
+    # two_column.change(update_doc_config, [two_column], None)
 
     # LLM Models
     keyTxt.change(set_key, [current_model, keyTxt], [

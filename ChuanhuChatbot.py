@@ -22,8 +22,8 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 gr.Chatbot._postprocess_chat_messages = postprocess_chat_messages
 gr.Chatbot.postprocess = postprocess
 
-# with open("web_assets/css/ChuanhuChat.css", "r", encoding="utf-8") as f:
-#     ChuanhuChatCSS = f.read()
+# with open("web_assets/css/allwinsChat.css", "r", encoding="utf-8") as f:
+#     allwinsChatCSS = f.read()
 
 
 def create_new_model():
@@ -40,9 +40,9 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
 
     topic = gr.State(i18n("未命名对话历史记录"))
 
-    with gr.Row(elem_id="chuanhu-header"):
+    with gr.Row(elem_id="allwins-header"):
         gr.HTML(get_html("header_title.html").format(
-            app_title=CHUANHU_TITLE), elem_id="app-title")
+            app_title=allwins_TITLE), elem_id="app-title")
         status_display = gr.Markdown(get_geoip(), elem_id="status-display")
     with gr.Row(elem_id="float-display"):
         user_info = gr.Markdown(
@@ -56,13 +56,13 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
             ok_btn=i18n("好"),
         ), visible=check_update)
 
-    with gr.Row(equal_height=True, elem_id="chuanhu-body"):
+    with gr.Row(equal_height=True, elem_id="allwins-body"):
 
         with gr.Column(elem_id="menu-area"):
-            with gr.Column(elem_id="chuanhu-history"):
+            with gr.Column(elem_id="allwins-history"):
                 with gr.Box():
-                    with gr.Row(elem_id="chuanhu-history-header"):
-                        with gr.Row(elem_id="chuanhu-history-search-row"):
+                    with gr.Row(elem_id="allwins-history-header"):
+                        with gr.Row(elem_id="allwins-history-search-row"):
                             with gr.Column(min_width=150, scale=2):
                                 historySearchTextbox = gr.Textbox(show_label=False, container=False, placeholder=i18n(
                                     "搜索（支持正则）..."), lines=1, elem_id="history-search-tb")
@@ -72,7 +72,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                                 historyRefreshBtn = gr.Button("", elem_id="gr-history-refresh-btn")
 
 
-                    with gr.Row(elem_id="chuanhu-history-body"):
+                    with gr.Row(elem_id="allwins-history-body"):
                         with gr.Column(scale=6, elem_id="history-select-wrap"):
                             historySelectList = gr.Radio(
                                 label=i18n("从列表中加载对话"),
@@ -108,13 +108,13 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                             exportMarkdownBtn = gr.Button(
                                 i18n("📝 Export as Markdown"), elem_id="gr-markdown-export-btn")
 
-            with gr.Column(elem_id="chuanhu-menu-footer"):
-                with gr.Row(elem_id="chuanhu-func-nav"):
+            with gr.Column(elem_id="allwins-menu-footer"):
+                with gr.Row(elem_id="allwins-func-nav"):
                     gr.HTML(get_html("func_nav.html"))
                 # gr.HTML(get_html("footer.html").format(versions=versions_html()), elem_id="footer")
-                # gr.Markdown(CHUANHU_DESCRIPTION, elem_id="chuanhu-author")
+                # gr.Markdown(allwins_DESCRIPTION, elem_id="allwins-author")
 
-        with gr.Column(elem_id="chuanhu-area", scale=5):
+        with gr.Column(elem_id="allwins-area", scale=5):
             with gr.Column(elem_id="chatbot-area"):
                 with gr.Row(elem_id="chatbot-header"):
                     model_select_dropdown = gr.Dropdown(
@@ -131,8 +131,8 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                     ), elem_id="chatbot-header-btn-bar")
                 with gr.Row():
                     chatbot = gr.Chatbot(
-                        label="Chuanhu Chat",
-                        elem_id="chuanhu-chatbot",
+                        label="allwins Chat",
+                        elem_id="allwins-chatbot",
                         latex_delimiters=latex_delimiters_set,
                         # height=700,
                         show_label=False,
@@ -188,12 +188,12 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
 
         with gr.Column(elem_id="toolbox-area", scale=1):
             # For CSS setting, there is an extra box. Don't remove it.
-            with gr.Box(elem_id="chuanhu-toolbox"):
+            with gr.Box(elem_id="allwins-toolbox"):
                 with gr.Row():
                     gr.Markdown("## "+i18n("工具箱"))
                     gr.HTML(get_html("close_btn.html").format(
                         obj="toolbox"), elem_classes="close-btn")
-                with gr.Tabs(elem_id="chuanhu-toolbox-tabs"):
+                with gr.Tabs(elem_id="allwins-toolbox-tabs"):
                     with gr.Tab(label=i18n("对话")):
                         with gr.Accordion(label="Prompt", open=True):
                             systemPromptTxt = gr.Textbox(
@@ -328,13 +328,13 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                     # changeAPIURLBtn = gr.Button(i18n("🔄 切换API地址"))
 
     with gr.Row(elem_id="popup-wrapper"):
-        with gr.Box(elem_id="chuanhu-popup"):
-            with gr.Box(elem_id="chuanhu-setting"):
+        with gr.Box(elem_id="allwins-popup"):
+            with gr.Box(elem_id="allwins-setting"):
                 with gr.Row():
                     gr.Markdown("## "+i18n("设置"))
                     gr.HTML(get_html("close_btn.html").format(
                         obj="box"), elem_classes="close-btn")
-                with gr.Tabs(elem_id="chuanhu-setting-tabs"):
+                with gr.Tabs(elem_id="allwins-setting-tabs"):
                     with gr.Tab(label=i18n("模型")):
                         keyTxt = gr.Textbox(
                             show_label=True,
@@ -413,21 +413,21 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
 
                     with gr.Tab(label=i18n("关于"), elem_id="about-tab"):
                         gr.Markdown(
-                            '<img alt="Chuanhu Chat logo" src="file=web_assets/icon/any-icon-512.png" style="max-width: 144px;">')
+                            '<img alt="allwins Chat logo" src="file=web_assets/icon/any-icon-512.png" style="max-width: 144px;">')
                         gr.Markdown("# "+i18n("川虎Chat"))
                         gr.HTML(get_html("footer.html").format(
                             versions=versions_html()), elem_id="footer")
-                        gr.Markdown(CHUANHU_DESCRIPTION, elem_id="description")
+                        gr.Markdown(allwins_DESCRIPTION, elem_id="description")
 
-            with gr.Box(elem_id="chuanhu-training"):
+            with gr.Box(elem_id="allwins-training"):
                 with gr.Row():
                     gr.Markdown("## "+i18n("训练"))
                     gr.HTML(get_html("close_btn.html").format(
                         obj="box"), elem_classes="close-btn")
-                with gr.Tabs(elem_id="chuanhu-training-tabs"):
+                with gr.Tabs(elem_id="allwins-training-tabs"):
                     with gr.Tab(label="OpenAI "+i18n("微调")):
                         openai_train_status = gr.Markdown(label=i18n("训练状态"), value=i18n(
-                            "查看[使用介绍](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用教程#微调-gpt-35)"))
+                            "查看[使用介绍](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用教程#微调-gpt-35)"))
 
                         with gr.Tab(label=i18n("准备数据集")):
                             dataset_preview_json = gr.JSON(
@@ -465,15 +465,15 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                     updatingMsg_i18n=i18n("正在尝试更新..."),
                     updateSuccess_i18n=i18n("更新成功，请重启本程序"),
                     updateFailure_i18n=i18n(
-                        '更新失败，请尝试<a href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用教程#手动更新" target="_blank">手动更新</a>'),
+                        '更新失败，请尝试<a href="https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用教程#手动更新" target="_blank">手动更新</a>'),
                     regenerate_i18n=i18n("重新生成"),
                     deleteRound_i18n=i18n("删除这轮问答"),
                     renameChat_i18n=i18n("重命名该对话"),
                     validFileName_i18n=i18n("请输入有效的文件名，不要包含以下特殊字符："),
                 ))
             with gr.Box(elem_id="fake-gradio-components", visible=False):
-                updateChuanhuBtn = gr.Button(
-                    visible=False, elem_classes="invisible-btn", elem_id="update-chuanhu-btn")
+                updateallwinsBtn = gr.Button(
+                    visible=False, elem_classes="invisible-btn", elem_id="update-allwins-btn")
                 changeSingleSessionBtn = gr.Button(
                     visible=False, elem_classes="invisible-btn", elem_id="change-single-session-btn")
                 changeOnlineSearchBtn = gr.Button(
@@ -757,8 +757,8 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
     # checkUpdateBtn.click(fn=None, _js='manualCheckUpdate')
 
     # Invisible elements
-    updateChuanhuBtn.click(
-        update_chuanhu,
+    updateallwinsBtn.click(
+        update_allwins,
         [],
         [status_display],
         show_progress=True,

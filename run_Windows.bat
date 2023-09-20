@@ -1,11 +1,11 @@
 @echo off
-echo Opening ChuanhuChatGPT...
+echo Opening allwinsChatGPT...
 
-if not exist "%~dp0\ChuanhuChat\Scripts" (
+if not exist "%~dp0\allwinsChat\Scripts" (
     echo Creating venv...
-    python -m venv ChuanhuChat
+    python -m venv allwinsChat
     
-    cd /d "%~dp0\ChuanhuChat\Scripts"
+    cd /d "%~dp0\allwinsChat\Scripts"
     call activate.bat
     
     cd /d "%~dp0"
@@ -15,10 +15,10 @@ if not exist "%~dp0\ChuanhuChat\Scripts" (
 goto :activate_venv
 
 :launch
-%PYTHON% ChuanhuChatbot.py %*
+%PYTHON% allwinsChatbot.py %*
 pause
 
 :activate_venv
-set PYTHON="%~dp0\ChuanhuChat\Scripts\Python.exe"
+set PYTHON="%~dp0\allwinsChat\Scripts\Python.exe"
 echo venv %PYTHON%
 goto :launch

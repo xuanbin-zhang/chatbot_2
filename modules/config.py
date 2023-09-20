@@ -26,7 +26,7 @@ __all__ = [
     "check_update",
     "latex_delimiters_set",
     "hide_history_when_not_logged_in",
-    "default_chuanhu_assistant_model",
+    "default_allwins_assistant_model",
     "show_api_billing",
     "chat_name_method_index",
 ]
@@ -154,8 +154,8 @@ if api_host is not None:
     os.environ["OPENAI_API_BASE"] = f"{api_host}/v1"
     logging.info(f"OpenAI API Base set to: {os.environ['OPENAI_API_BASE']}")
 
-default_chuanhu_assistant_model = config.get(
-    "default_chuanhu_assistant_model", "gpt-3.5-turbo")
+default_allwins_assistant_model = config.get(
+    "default_allwins_assistant_model", "gpt-3.5-turbo")
 for x in ["GOOGLE_CSE_ID", "GOOGLE_API_KEY", "WOLFRAM_ALPHA_APPID", "SERPAPI_API_KEY"]:
     if config.get(x, None) is not None:
         os.environ[x] = config[x]

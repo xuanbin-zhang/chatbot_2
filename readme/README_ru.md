@@ -3,17 +3,17 @@
   <a title="Chinese" href="../README.md">简体中文</a> | <a title="English" href="README_en.md">English</a> |  <a title="Japanese" href="README_ja.md">日本語</a> |  Russian
 </div>
 
-<h1 align="center">川虎 Chat 🐯 Chuanhu Chat</h1>
+<h1 align="center">川虎 Chat 🐯 allwins Chat</h1>
 <div align="center">
-  <a href="https://github.com/GaiZhenBiao/ChuanhuChatGPT">
-    <img src="https://github.com/GaiZhenbiao/ChuanhuChatGPT/assets/70903329/aca3a7ec-4f1d-4667-890c-a6f47bf08f63" alt="Logo" height="156">
+  <a href="https://github.com/GaiZhenBiao/allwinsChatGPT">
+    <img src="https://github.com/GaiZhenbiao/allwinsChatGPT/assets/70903329/aca3a7ec-4f1d-4667-890c-a6f47bf08f63" alt="Logo" height="156">
   </a>
 
 <p align="center">
     <h3>Легкий и удобный веб-интерфейс для LLM, включая ChatGPT/ChatGLM/LLaMA</h3>
     <p align="center">
-      <a href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/blob/main/LICENSE">
-        <img alt="Tests Passing" src="https://img.shields.io/github/license/GaiZhenbiao/ChuanhuChatGPT" />
+      <a href="https://github.com/GaiZhenbiao/allwinsChatGPT/blob/main/LICENSE">
+        <img alt="Tests Passing" src="https://img.shields.io/github/license/GaiZhenbiao/allwinsChatGPT" />
       </a>
       <a href="https://gradio.app/">
         <img alt="GitHub Contributors" src="https://img.shields.io/badge/Base-Gradio-fb7d1a?style=flat" />
@@ -30,18 +30,18 @@
         ·
       <a href="https://www.youtube.com/watch?v=x-O1jjBqgu4"><strong>3.0 Введение и руководство</strong></a>
 	||
-      <a href="https://huggingface.co/spaces/JohnSmith9982/ChuanhuChatGPT"><strong>Пробная онлайн-версия</strong></a>
+      <a href="https://huggingface.co/spaces/JohnSmith9982/allwinsChatGPT"><strong>Пробная онлайн-версия</strong></a>
       	·
-      <a href="https://huggingface.co/login?next=%2Fspaces%2FJohnSmith9982%2FChuanhuChatGPT%3Fduplicate%3Dtrue"><strong>Развертывание в один клик</strong></a>
+      <a href="https://huggingface.co/login?next=%2Fspaces%2FJohnSmith9982%2FallwinsChatGPT%3Fduplicate%3Dtrue"><strong>Развертывание в один клик</strong></a>
     </p>
   </p>
 </div>
 
-[![Video Title](https://github.com/GaiZhenbiao/ChuanhuChatGPT/assets/51039745/0eee1598-c2fd-41c6-bda9-7b059a3ce6e7.jpg)](https://github.com/GaiZhenbiao/ChuanhuChatGPT/assets/51039745/0eee1598-c2fd-41c6-bda9-7b059a3ce6e7?autoplay=1)
+[![Video Title](https://github.com/GaiZhenbiao/allwinsChatGPT/assets/51039745/0eee1598-c2fd-41c6-bda9-7b059a3ce6e7.jpg)](https://github.com/GaiZhenbiao/allwinsChatGPT/assets/51039745/0eee1598-c2fd-41c6-bda9-7b059a3ce6e7?autoplay=1)
 
 ## ✨ Обновление 5.0!
 
-![ChuanhuChat5](https://github.com/GaiZhenbiao/ChuanhuChatGPT/assets/70903329/f2c2be3a-ea93-4edf-8221-94eddd4a0178)
+![allwinsChat5](https://github.com/GaiZhenbiao/allwinsChatGPT/assets/70903329/f2c2be3a-ea93-4edf-8221-94eddd4a0178)
 
 <sup>New!</sup> Совершенно новый пользовательский интерфейс! Он такой приятный, не похожий на Gradio, с новым эффектом матового стекла!
 
@@ -73,7 +73,7 @@
 ## Советы по использованию
 
 ### 💪 Мощные функции
-- **Chuanhu ассистент**: подобно AutoGPT, полностью автоматизированное решение вашей проблемы;
+- **allwins ассистент**: подобно AutoGPT, полностью автоматизированное решение вашей проблемы;
 - **Поиск в Интернете**: данные ChatGPT устарели? Дайте LLM возможность использовать сеть;
 - **База знаний**: позвольте ChatGPT помочь вам быстро прочитать информацию! Ответить на вопросы в соответствии с файлами.
 - **Локальная установка LLM**: одним щелчком разверните свою собственную модель языка большого размера.
@@ -120,22 +120,22 @@
 ## Быстрый старт
 
 ```shell
-git clone https://github.com/GaiZhenbiao/ChuanhuChatGPT.git
-cd ChuanhuChatGPT
+git clone https://github.com/GaiZhenbiao/allwinsChatGPT.git
+cd allwinsChatGPT
 pip install -r requirements.txt
 ```
 
 Затем создайте копию `config_example.json`, переименуйте ее в `config.json`, а затем укажите в файле свой API-ключ и другие настройки.
 
 ```shell
-python ChuanhuChatbot.py
+python allwinsChatbot.py
 ```
 
 Откроется окно браузера, и вы сможете общаться с ChatGPT.
 
 > **Примечание**
 >
-> Подробные инструкции см. на нашей [wiki-странице](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用教程).
+> Подробные инструкции см. на нашей [wiki-странице](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用教程).
 
 ## Поиск и устранение неисправностей
 
@@ -143,7 +143,7 @@ python ChuanhuChatbot.py
 
 1. Загрузите архив с последней версией кода, нажав на кнопку `Download ZIP` на веб-странице, или
    ```shell
-   git pull https://github.com/GaiZhenbiao/ChuanhuChatGPT.git main -f
+   git pull https://github.com/GaiZhenbiao/allwinsChatGPT.git main -f
    ```
 2. Попробуйте установить зависимости еще раз (так как в этом проекте могли появиться новые зависимости)
    ```
@@ -152,34 +152,34 @@ python ChuanhuChatbot.py
 
 Как правило, большинство проблем можно решить, выполнив следующие действия.
 
-Если проблема сохраняется, обратитесь к этой странице: [Часто задаваемые вопросы (FAQ)](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/常见问题)
+Если проблема сохраняется, обратитесь к этой странице: [Часто задаваемые вопросы (FAQ)](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/常见问题)
 
 На этой странице перечислены практически все возможные проблемы и способы их решения. Пожалуйста, внимательно прочитайте его.
 
 ## Дополнительная информация
 
-Более подробную информацию можно найти в нашей [wiki](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki):
+Более подробную информацию можно найти в нашей [wiki](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki):
 
-- [Как добавить перевод](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/Localization)
-- [Как внести вклад](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/贡献指南)
-- [Как цитировать проект](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用许可#如何引用该项目)
-- [Журнал изменений проекта](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/更新日志)
-- [Лицензия проекта](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用许可)
+- [Как добавить перевод](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/Localization)
+- [Как внести вклад](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/贡献指南)
+- [Как цитировать проект](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用许可#如何引用该项目)
+- [Журнал изменений проекта](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/更新日志)
+- [Лицензия проекта](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用许可)
 
 ## Starchart
 
-[![Star History Chart](https://api.star-history.com/svg?repos=GaiZhenbiao/ChuanhuChatGPT&type=Date)](https://star-history.com/#GaiZhenbiao/ChuanhuChatGPT&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=GaiZhenbiao/allwinsChatGPT&type=Date)](https://star-history.com/#GaiZhenbiao/allwinsChatGPT&Date)
 
 ## Помощники
 
-<a href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GaiZhenbiao/ChuanhuChatGPT" />
+<a href="https://github.com/GaiZhenbiao/allwinsChatGPT/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GaiZhenbiao/allwinsChatGPT" />
 </a>
 
 ## Спонсорство
 
 🐯 Если этот проект будет вам полезен, не стесняйтесь угостить меня колой или чашкой кофе~.
 
-<a href="https://www.buymeacoffee.com/ChuanhuChat" ><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=ChuanhuChat&button_colour=219d53&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" alt="Buy Me A Coffee" width="250"></a>
+<a href="https://www.buymeacoffee.com/allwinsChat" ><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=allwinsChat&button_colour=219d53&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" alt="Buy Me A Coffee" width="250"></a>
 
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/51039745/226920291-e8ec0b0a-400f-4c20-ac13-dafac0c3aeeb.JPG">

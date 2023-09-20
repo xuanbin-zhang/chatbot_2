@@ -5,14 +5,14 @@ import gradio as gr
 
 from . import shared
 
-# with open("./assets/ChuanhuChat.js", "r", encoding="utf-8") as f, \
+# with open("./assets/allwinsChat.js", "r", encoding="utf-8") as f, \
 #     open("./assets/external-scripts.js", "r", encoding="utf-8") as f1:
 #     customJS = f.read()
 #     externalScripts = f1.read()
 
 
 def get_html(filename):
-    path = os.path.join(shared.chuanhu_path, "web_assets", "html", filename)
+    path = os.path.join(shared.allwins_path, "web_assets", "html", filename)
     if os.path.exists(path):
         with open(path, encoding="utf8") as file:
             return file.read()
@@ -20,7 +20,7 @@ def get_html(filename):
 
 def webpath(fn):
     if fn.startswith(shared.assets_path):
-        web_path = os.path.relpath(fn, shared.chuanhu_path).replace('\\', '/')
+        web_path = os.path.relpath(fn, shared.allwins_path).replace('\\', '/')
     else:
         web_path = os.path.abspath(fn)
     return f'file={web_path}?{os.path.getmtime(fn)}'
@@ -43,7 +43,7 @@ def css_html():
 
 def list_scripts(scriptdirname, extension):
     scripts_list = []
-    scripts_dir = os.path.join(shared.chuanhu_path, "web_assets", scriptdirname)
+    scripts_dir = os.path.join(shared.allwins_path, "web_assets", scriptdirname)
     if os.path.exists(scripts_dir):
         for filename in sorted(os.listdir(scripts_dir)):
             scripts_list.append(ScriptFile(shared.assets_path, filename, os.path.join(scripts_dir, filename)))

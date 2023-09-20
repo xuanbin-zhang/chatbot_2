@@ -1,7 +1,7 @@
 
 // 为 bot 消息添加复制与切换显示按钮 以及最新消息加上重新生成，删除最新消息，嗯。
 
-function addChuanhuButton(botElement) {
+function addallwinsButton(botElement) {
 
     // botElement = botRow.querySelector('.message.bot');
     var isLatestMessage = botElement.classList.contains('latest');
@@ -10,7 +10,7 @@ function addChuanhuButton(botElement) {
     var mdMessage = botElement.querySelector('.md-message');
     
     if (!rawMessage) { // 如果没有 raw message，说明是早期历史记录，去除按钮
-        // var buttons = botElement.querySelectorAll('button.chuanhu-btn');
+        // var buttons = botElement.querySelectorAll('button.allwins-btn');
         // for (var i = 0; i < buttons.length; i++) {
         //     buttons[i].parentNode.removeChild(buttons[i]);
         // }
@@ -24,7 +24,7 @@ function addChuanhuButton(botElement) {
 
     // Copy bot button
     var copyButton = document.createElement('button');
-    copyButton.classList.add('chuanhu-btn');
+    copyButton.classList.add('allwins-btn');
     copyButton.classList.add('copy-bot-btn');
     copyButton.setAttribute('aria-label', 'Copy');
     copyButton.innerHTML = copyIcon;
@@ -62,7 +62,7 @@ function addChuanhuButton(botElement) {
 
     // Toggle button
     var toggleButton = document.createElement('button');
-    toggleButton.classList.add('chuanhu-btn');
+    toggleButton.classList.add('allwins-btn');
     toggleButton.classList.add('toggle-md-btn');
     toggleButton.setAttribute('aria-label', 'Toggle');
     var renderMarkdown = mdMessage.classList.contains('hideM');
@@ -104,7 +104,7 @@ function addChuanhuButton(botElement) {
 }
 
 function setLatestMessage() {
-    var latestMessage = gradioApp().querySelector('#chuanhu-chatbot > .wrapper > .wrap > .message-wrap .message.bot.latest');
+    var latestMessage = gradioApp().querySelector('#allwins-chatbot > .wrapper > .wrap > .message-wrap .message.bot.latest');
     if (latestMessage) addLatestMessageButtons(latestMessage);
 }
 
@@ -125,7 +125,7 @@ function addLatestMessageButtons(botElement) {
 
     //leading
     var regenerateButton = document.createElement('button');
-    regenerateButton.classList.add('chuanhu-btn');
+    regenerateButton.classList.add('allwins-btn');
     regenerateButton.classList.add('regenerate-btn');
     regenerateButton.setAttribute('aria-label', 'Regenerate');
     regenerateButton.innerHTML = regenIcon + `<span>${i18n(regenerate_i18n)}</span>`;
@@ -136,7 +136,7 @@ function addLatestMessageButtons(botElement) {
     });
 
     var deleteButton = document.createElement('button');
-    deleteButton.classList.add('chuanhu-btn');
+    deleteButton.classList.add('allwins-btn');
     deleteButton.classList.add('delete-latest-btn');
     deleteButton.setAttribute('aria-label', 'Delete');
     deleteButton.innerHTML = deleteIcon + `<span>${i18n(deleteRound_i18n)}</span>`;
@@ -151,7 +151,7 @@ function addLatestMessageButtons(botElement) {
 
     // trailing
     var likeButton = document.createElement('button');
-    likeButton.classList.add('chuanhu-btn');
+    likeButton.classList.add('allwins-btn');
     likeButton.classList.add('like-latest-btn');
     likeButton.setAttribute('aria-label', 'Like');
     likeButton.innerHTML = likeIcon;
@@ -162,7 +162,7 @@ function addLatestMessageButtons(botElement) {
     });
 
     var dislikeButton = document.createElement('button');
-    dislikeButton.classList.add('chuanhu-btn');
+    dislikeButton.classList.add('allwins-btn');
     dislikeButton.classList.add('dislike-latest-btn');
     dislikeButton.setAttribute('aria-label', 'Dislike');
     dislikeButton.innerHTML = dislikeIcon;

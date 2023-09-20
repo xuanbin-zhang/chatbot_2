@@ -49,7 +49,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ env.GITOWNER }}/chuanhuchatgpt:latest
-            ghcr.io/${{ env.GITOWNER }}/chuanhuchatgpt:${{ env.RELEASE_TAG }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/chuanhuchatgpt:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/chuanhuchatgpt:${{ env.RELEASE_TAG }}
+            ghcr.io/${{ env.GITOWNER }}/allwinschatgpt:latest
+            ghcr.io/${{ env.GITOWNER }}/allwinschatgpt:${{ env.RELEASE_TAG }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/allwinschatgpt:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/allwinschatgpt:${{ env.RELEASE_TAG }}

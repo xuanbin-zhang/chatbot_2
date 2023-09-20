@@ -15,4 +15,4 @@ ENV PATH=/root/.local/bin:$PATH
 COPY . /app
 WORKDIR /app
 ENV dockerrun=yes
-CMD ["python3", "-u", "ChuanhuChatbot.py","2>&1", "|", "tee", "/var/log/application.log"]
+CMD ["python3", "-u", "allwinsChatbot.py","2>&1", "|", "tee", "/var/log/application.log"]

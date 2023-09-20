@@ -1,5 +1,5 @@
 
-// ChuanhuChat core javascript
+// allwinsChat core javascript
 
 const MAX_HISTORY_LENGTH = 32;
 
@@ -25,15 +25,15 @@ var updateToast = null;
 var sendBtn = null;
 var cancelBtn = null;
 var sliders = null;
-var updateChuanhuBtn = null;
+var updateallwinsBtn = null;
 var statusDisplay = null;
 
 var historySelector = null;
-var chuanhuPopup = null;
+var allwinsPopup = null;
 var settingBox = null;
 var trainingBox = null;
 var popupWrapper = null;
-var chuanhuHeader = null;
+var allwinsHeader = null;
 var menu = null;
 var toolbox = null;
 // var trainBody = null;
@@ -46,7 +46,7 @@ let windowWidth = window.innerWidth; // 初始窗口宽度
 function addInit() {
     var needInit = {chatbotIndicator, uploaderIndicator};
     
-    chatbotIndicator = gradioApp().querySelector('#chuanhu-chatbot > div.wrap');
+    chatbotIndicator = gradioApp().querySelector('#allwins-chatbot > div.wrap');
     uploaderIndicator = gradioApp().querySelector('#upload-index-file > div.wrap');
     chatListIndicator = gradioApp().querySelector('#history-select-dropdown > div.wrap');
 
@@ -73,22 +73,22 @@ function initialize() {
     userInfoDiv = gradioApp().getElementById("user-info");
     appTitleDiv = gradioApp().getElementById("app-title");
     chatbotArea = gradioApp().querySelector('#chatbot-area');
-    chatbot = gradioApp().querySelector('#chuanhu-chatbot');
-    chatbotWrap = gradioApp().querySelector('#chuanhu-chatbot > .wrapper > .wrap');
+    chatbot = gradioApp().querySelector('#allwins-chatbot');
+    chatbotWrap = gradioApp().querySelector('#allwins-chatbot > .wrapper > .wrap');
     apSwitch = gradioApp().querySelector('.apSwitch input[type="checkbox"]');
     updateToast = gradioApp().querySelector("#toast-update");
     sendBtn = gradioApp().getElementById("submit-btn");
     cancelBtn = gradioApp().getElementById("cancel-btn");
     sliders = gradioApp().querySelectorAll('input[type="range"]');
-    updateChuanhuBtn = gradioApp().getElementById("update-chuanhu-btn");
+    updateallwinsBtn = gradioApp().getElementById("update-allwins-btn");
     statusDisplay = gradioApp().querySelector('#status-display');
 
     historySelector = gradioApp().querySelector('#history-select-dropdown');
-    chuanhuPopup = gradioApp().querySelector('#chuanhu-popup');
-    settingBox = gradioApp().querySelector('#chuanhu-setting');
-    trainingBox = gradioApp().querySelector('#chuanhu-training');
+    allwinsPopup = gradioApp().querySelector('#allwins-popup');
+    settingBox = gradioApp().querySelector('#allwins-setting');
+    trainingBox = gradioApp().querySelector('#allwins-training');
     popupWrapper = gradioApp().querySelector('#popup-wrapper');
-    chuanhuHeader = gradioApp().querySelector('#chuanhu-header');
+    allwinsHeader = gradioApp().querySelector('#allwins-header');
     menu = gradioApp().querySelector('#menu-area');
     toolbox = gradioApp().querySelector('#toolbox-area');
     // trainBody = gradioApp().querySelector('#train-body');
@@ -298,8 +298,8 @@ function setPopupBoxPosition() {
     popupWrapper.style.width = `${screenWidth}px`;
     // const popupBoxWidth = 680;
     // const popupBoxHeight = 400;
-    // chuanhuPopup.style.left = `${(screenWidth - popupBoxWidth) / 2}px`;
-    // chuanhuPopup.style.top = `${(screenHeight - popupBoxHeight) / 2}px`;
+    // allwinsPopup.style.left = `${(screenWidth - popupBoxWidth) / 2}px`;
+    // allwinsPopup.style.top = `${(screenHeight - popupBoxHeight) / 2}px`;
 }
 
 function updateVH() {
@@ -347,7 +347,7 @@ function chatbotContentChanged(attempt = 1, force = false) {
             saveHistoryHtml();
             disableSendBtn();
 
-            gradioApp().querySelectorAll('#chuanhu-chatbot .message-wrap .message.bot').forEach(addChuanhuButton);
+            gradioApp().querySelectorAll('#allwins-chatbot .message-wrap .message.bot').forEach(addallwinsButton);
 
             if (chatbotIndicator.classList.contains('hide')) { // generation finished
                 setLatestMessage();
@@ -356,7 +356,7 @@ function chatbotContentChanged(attempt = 1, force = false) {
 
             if (!chatbotIndicator.classList.contains('translucent')) { // message deleted
                 var checkLatestAdded = setInterval(() => {
-                    var latestMessageNow = gradioApp().querySelector('#chuanhu-chatbot > .wrapper > .wrap > .message-wrap .message.bot.latest');
+                    var latestMessageNow = gradioApp().querySelector('#allwins-chatbot > .wrapper > .wrap > .message-wrap .message.bot.latest');
                     if (latestMessageNow && latestMessageNow.querySelector('.message-btn-row')) {
                         clearInterval(checkLatestAdded);
                     } else {
@@ -439,7 +439,7 @@ function makeML(str) {
     l = l.substring(l.indexOf("/*") + 3, l.lastIndexOf("*/"))
     return l
 }
-let ChuanhuInfo = function () {
+let allwinsInfo = function () {
     /* 
    ________                      __             ________          __ 
   / ____/ /_  __  ______ _____  / /_  __  __   / ____/ /_  ____ _/ /_
@@ -447,13 +447,13 @@ let ChuanhuInfo = function () {
 / /___/ / / / /_/ / /_/ / / / / / / / /_/ /  / /___/ / / / /_/ / /_  
 \____/_/ /_/\__,_/\__,_/_/ /_/_/ /_/\__,_/   \____/_/ /_/\__,_/\__/  
                                                                      
-   川虎Chat (Chuanhu Chat) - GUI for ChatGPT API and many LLMs
+   川虎Chat (allwins Chat) - GUI for ChatGPT API and many LLMs
  */
 }
 let description = `
-© 2023 Chuanhu, MZhao, Keldos
-GitHub repository: [https://github.com/GaiZhenbiao/ChuanhuChatGPT]\n
+© 2023 allwins, MZhao, Keldos
+GitHub repository: [https://github.com/GaiZhenbiao/allwinsChatGPT]\n
 Enjoy our project!\n
 `
-console.log(`%c${makeML(ChuanhuInfo)}`,styleTitle1);
+console.log(`%c${makeML(allwinsInfo)}`,styleTitle1);
 console.log(`%c${description}`, styleDesc1);

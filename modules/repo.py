@@ -75,7 +75,7 @@ def commit_html():
     commit = commit_hash()
     if commit != "<none>":
         short_commit = commit[0:7]
-        commit_info = f'<a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/commit/{short_commit}">{short_commit}</a>'
+        commit_info = f'<a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/allwinsChatGPT/commit/{short_commit}">{short_commit}</a>'
     else:
         commit_info = "unknown \U0001F615"
     return commit_info
@@ -95,9 +95,9 @@ def tag_html():
     if tag == "<none>":
         tag_info = "unknown \U0001F615"
     elif tag == "<edited>":
-        tag_info = f'<a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/releases/tag/{latest_tag}">{latest_tag}</a><span style="font-size:smaller">*</span>'
+        tag_info = f'<a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/allwinsChatGPT/releases/tag/{latest_tag}">{latest_tag}</a><span style="font-size:smaller">*</span>'
     else:
-        tag_info = f'<a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/releases/tag/{tag}">{tag}</a>'
+        tag_info = f'<a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/allwinsChatGPT/releases/tag/{tag}">{tag}</a>'
  
     return tag_info
 
@@ -114,7 +114,7 @@ def versions_html():
          • 
         Gradio: {gr.__version__}
          • 
-        <a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/ChuanhuChatGPT">ChuanhuChat</a>: {repo_version}
+        <a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/allwinsChatGPT">allwinsChat</a>: {repo_version}
         """
 
 def version_time():
@@ -139,7 +139,7 @@ def get_current_branch():
 def get_latest_release():
     try:
         import requests
-        release = requests.get("https://api.github.com/repos/GaiZhenbiao/ChuanhuChatGPT/releases/latest").json()
+        release = requests.get("https://api.github.com/repos/GaiZhenbiao/allwinsChatGPT/releases/latest").json()
         tag = release["tag_name"]
         release_note = release["body"]
         need_pip = release_note.find("requirements reinstall needed") != -1
@@ -152,7 +152,7 @@ def get_latest_release():
 def get_tag_commit_hash(tag):
     try:
         import requests
-        tags = requests.get("https://api.github.com/repos/GaiZhenbiao/ChuanhuChatGPT/tags").json()
+        tags = requests.get("https://api.github.com/repos/GaiZhenbiao/allwinsChatGPT/tags").json()
         commit_hash = [x["commit"]["sha"] for x in tags if x["name"] == tag][0]
     except Exception:
         commit_hash = "<none>"
@@ -165,7 +165,7 @@ def repo_need_stash():
         return True
 
 def background_update():
-    # {git} fetch --all && ({git} pull https://github.com/GaiZhenbiao/ChuanhuChatGPT.git main -f || ({git} stash && {git} pull https://github.com/GaiZhenbiao/ChuanhuChatGPT.git main -f && {git} stash pop)) && {pip} install -r requirements.txt")
+    # {git} fetch --all && ({git} pull https://github.com/GaiZhenbiao/allwinsChatGPT.git main -f || ({git} stash && {git} pull https://github.com/GaiZhenbiao/allwinsChatGPT.git main -f && {git} stash pop)) && {pip} install -r requirements.txt")
     try:
         latest_release = get_latest_release()
         latest_release_tag = latest_release["tag"]
@@ -177,7 +177,7 @@ def background_update():
         current_branch = get_current_branch()
         updater_branch = f'tmp_{timestamp}'
         backup_branch = f'backup_{timestamp}'
-        track_repo = "https://github.com/GaiZhenbiao/ChuanhuChatGPT.git"
+        track_repo = "https://github.com/GaiZhenbiao/allwinsChatGPT.git"
         try:
             try:
                 run(f"{git} fetch {track_repo}", desc="[Updater] Fetching from github...", live=False)

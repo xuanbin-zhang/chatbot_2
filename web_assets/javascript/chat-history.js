@@ -4,7 +4,7 @@ var loadhistorytime = 0; // for debugging
 
 
 function saveHistoryHtml() {
-    var historyHtml = document.querySelector('#chuanhu-chatbot>.wrapper>.wrap');
+    var historyHtml = document.querySelector('#allwins-chatbot>.wrapper>.wrap');
     if (!historyHtml) return;   // no history, do nothing
     localStorage.setItem('chatHistory', historyHtml.innerHTML);
     // console.log("History Saved")

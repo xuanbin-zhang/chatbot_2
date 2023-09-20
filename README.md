@@ -3,17 +3,17 @@
   简体中文 | <a title="English" href="./readme/README_en.md">English</a> | <a title="Japanese" href="./readme/README_ja.md">日本語</a> | <a title="Russian" href="./readme/README_ru.md">Russian</a>
 </div>
 
-<h1 align="center">川虎 Chat 🐯 Chuanhu Chat</h1>
+<h1 align="center">川虎 Chat 🐯 allwins Chat</h1>
 <div align="center">
-  <a href="https://github.com/GaiZhenBiao/ChuanhuChatGPT">
-    <img src="https://github.com/GaiZhenbiao/ChuanhuChatGPT/assets/70903329/aca3a7ec-4f1d-4667-890c-a6f47bf08f63" alt="Logo" height="156">
+  <a href="https://github.com/GaiZhenBiao/allwinsChatGPT">
+    <img src="https://github.com/GaiZhenbiao/allwinsChatGPT/assets/70903329/aca3a7ec-4f1d-4667-890c-a6f47bf08f63" alt="Logo" height="156">
   </a>
 
 <p align="center">
     <h3>为ChatGPT等多种LLM提供了一个轻快好用的Web图形界面和众多附加功能</h3>
     <p align="center">
-      <a href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/blob/main/LICENSE">
-        <img alt="Tests Passing" src="https://img.shields.io/github/license/GaiZhenbiao/ChuanhuChatGPT" />
+      <a href="https://github.com/GaiZhenbiao/allwinsChatGPT/blob/main/LICENSE">
+        <img alt="Tests Passing" src="https://img.shields.io/github/license/GaiZhenbiao/allwinsChatGPT" />
       </a>
       <a href="https://gradio.app/">
         <img alt="GitHub Contributors" src="https://img.shields.io/badge/Base-Gradio-fb7d1a?style=flat" />
@@ -28,23 +28,23 @@
         ·
       <a href="https://www.bilibili.com/video/BV1184y1w7aP"><strong>2.0介绍视频</strong></a>
 	||
-      <a href="https://huggingface.co/spaces/JohnSmith9982/ChuanhuChatGPT"><strong>在线体验</strong></a>
+      <a href="https://huggingface.co/spaces/JohnSmith9982/allwinsChatGPT"><strong>在线体验</strong></a>
       	·
-      <a href="https://huggingface.co/login?next=%2Fspaces%2FJohnSmith9982%2FChuanhuChatGPT%3Fduplicate%3Dtrue"><strong>一键部署</strong></a>
+      <a href="https://huggingface.co/login?next=%2Fspaces%2FJohnSmith9982%2FallwinsChatGPT%3Fduplicate%3Dtrue"><strong>一键部署</strong></a>
     </p>
   </p>
 </div>
 
-[![Video Title](https://github.com/GaiZhenbiao/ChuanhuChatGPT/assets/51039745/0eee1598-c2fd-41c6-bda9-7b059a3ce6e7.jpg)](https://github.com/GaiZhenbiao/ChuanhuChatGPT/assets/51039745/0eee1598-c2fd-41c6-bda9-7b059a3ce6e7?autoplay=1)
+[![Video Title](https://github.com/GaiZhenbiao/allwinsChatGPT/assets/51039745/0eee1598-c2fd-41c6-bda9-7b059a3ce6e7.jpg)](https://github.com/GaiZhenbiao/allwinsChatGPT/assets/51039745/0eee1598-c2fd-41c6-bda9-7b059a3ce6e7?autoplay=1)
 
 ## 目录
 
-| [支持模型](#支持模型) | [使用技巧](#使用技巧) | [安装方式](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用教程) | [常见问题](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/常见问题) | [给作者买可乐🥤](#捐款) |
+| [支持模型](#支持模型) | [使用技巧](#使用技巧) | [安装方式](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用教程) | [常见问题](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/常见问题) | [给作者买可乐🥤](#捐款) |
 | --- | --- | --- | --- | --- |
 
 ## ✨ 5.0 重磅更新！
 
-![ChuanhuChat5更新](https://github.com/GaiZhenbiao/ChuanhuChatGPT/assets/70903329/f2c2be3a-ea93-4edf-8221-94eddd4a0178)
+![allwinsChat5更新](https://github.com/GaiZhenbiao/allwinsChatGPT/assets/70903329/f2c2be3a-ea93-4edf-8221-94eddd4a0178)
 
 
 <sup>New!</sup> 全新的用户界面！精致得不像 Gradio，甚至有毛玻璃效果！
@@ -127,22 +127,22 @@
 在终端执行以下命令：
 
 ```shell
-git clone https://github.com/GaiZhenbiao/ChuanhuChatGPT.git
-cd ChuanhuChatGPT
+git clone https://github.com/GaiZhenbiao/allwinsChatGPT.git
+cd allwinsChatGPT
 pip install -r requirements.txt
 ```
 
 然后，在项目文件夹中复制一份 `config_example.json`，并将其重命名为 `config.json`，在其中填入 `API-Key` 等设置。
 
 ```shell
-python ChuanhuChatbot.py
+python allwinsChatbot.py
 ```
 
 一个浏览器窗口将会自动打开，此时您将可以使用 **川虎Chat** 与ChatGPT或其他模型进行对话。
 
 > **Note**
 > 
-> 具体详尽的安装教程和使用教程请查看[本项目的wiki页面](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用教程)。
+> 具体详尽的安装教程和使用教程请查看[本项目的wiki页面](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用教程)。
 
 ## 疑难杂症解决
 
@@ -150,7 +150,7 @@ python ChuanhuChatbot.py
 
 1. 点击网页上的 `Download ZIP` 按钮，下载最新代码并解压覆盖，或
    ```shell
-   git pull https://github.com/GaiZhenbiao/ChuanhuChatGPT.git main -f
+   git pull https://github.com/GaiZhenbiao/allwinsChatGPT.git main -f
    ```
 2. 尝试再次安装依赖（可能本项目引入了新的依赖）
    ```
@@ -159,27 +159,27 @@ python ChuanhuChatbot.py
 
 很多时候，这样就可以解决问题。
 
-如果问题仍然存在，请查阅该页面：[常见问题](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/常见问题)
+如果问题仍然存在，请查阅该页面：[常见问题](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/常见问题)
 
 该页面列出了**几乎所有**您可能遇到的各种问题，包括如何配置代理，以及遇到问题后您该采取的措施，**请务必认真阅读**。
 
 ## 了解更多
 
-若需了解更多信息，请查看我们的 [wiki](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki)：
+若需了解更多信息，请查看我们的 [wiki](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki)：
 
-- [想要做出贡献？](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/贡献指南)
-- [项目更新情况？](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/更新日志)
-- [二次开发许可？](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用许可)
-- [如何引用项目？](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用许可#如何引用该项目)
+- [想要做出贡献？](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/贡献指南)
+- [项目更新情况？](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/更新日志)
+- [二次开发许可？](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用许可)
+- [如何引用项目？](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用许可#如何引用该项目)
 
 ## Starchart
 
-[![Star History Chart](https://api.star-history.com/svg?repos=GaiZhenbiao/ChuanhuChatGPT&type=Date)](https://star-history.com/#GaiZhenbiao/ChuanhuChatGPT&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=GaiZhenbiao/allwinsChatGPT&type=Date)](https://star-history.com/#GaiZhenbiao/allwinsChatGPT&Date)
 
 ## Contributors
 
-<a href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GaiZhenbiao/ChuanhuChatGPT" />
+<a href="https://github.com/GaiZhenbiao/allwinsChatGPT/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GaiZhenbiao/allwinsChatGPT" />
 </a>
 
 ## 捐款
@@ -188,6 +188,6 @@ python ChuanhuChatbot.py
 
 联系作者：请去[我的bilibili账号](https://space.bilibili.com/29125536)私信我。
 
-<a href="https://www.buymeacoffee.com/ChuanhuChat" ><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=ChuanhuChat&button_colour=219d53&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" alt="Buy Me A Coffee" width="250"></a>
+<a href="https://www.buymeacoffee.com/allwinsChat" ><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=allwinsChat&button_colour=219d53&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" alt="Buy Me A Coffee" width="250"></a>
 
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/51039745/226920291-e8ec0b0a-400f-4c20-ac13-dafac0c3aeeb.JPG">

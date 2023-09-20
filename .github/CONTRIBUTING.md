@@ -17,7 +17,7 @@
 
 是的！提交ISSUE其实是您为项目做出贡献的一种方式！但需要您提出合理的ISSUE才是对项目有帮助的。
 
-我们的[常见问题](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/常见问题)中描述了您应当怎样提出一个不重复的ISSUE，以及什么情况应当提ISSUE，什么情况应当在讨论区发问。
+我们的[常见问题](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/常见问题)中描述了您应当怎样提出一个不重复的ISSUE，以及什么情况应当提ISSUE，什么情况应当在讨论区发问。
 
 **请注意，ISSUE不是项目的评论区。**
 
@@ -32,7 +32,7 @@
 
 如果您具备一定能力，您可以修改本项目的源代码，并提交一个 pull request！合并之后，您的名字将会出现在 CONTRIBUTORS 中~
 
-我们的[贡献指南](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/贡献指南)详细地写出了您每一步应当做什么~ 如果您希望提交源代码的更改，快去看看吧~
+我们的[贡献指南](https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/贡献指南)详细地写出了您每一步应当做什么~ 如果您希望提交源代码的更改，快去看看吧~
 
 > **Note**
 >

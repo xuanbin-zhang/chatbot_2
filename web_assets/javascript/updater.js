@@ -44,7 +44,7 @@ var statusObserver = new MutationObserver(function (mutationsList) {
 var showingUpdateInfo = false;
 async function getLatestRelease() {
     try {
-        const response = await fetch('https://api.github.com/repos/gaizhenbiao/chuanhuchatgpt/releases/latest');
+        const response = await fetch('https://api.github.com/repos/gaizhenbiao/allwinschatgpt/releases/latest');
         if (!response.ok) {
             console.log(`Error: ${response.status} - ${response.statusText}`);
             updateInfoGotten = true;
@@ -96,8 +96,8 @@ async function updateLatestVersion() {
         } else { //如果当前版本号获取失败，使用时间比较
             const latestVersionTime = (new Date(data.created_at)).getTime();
             if (latestVersionTime) {
-                const latestVersionInfo = `<a href="https://github.com/gaizhenbiao/chuanhuchatgpt/releases/latest" target="_blank" id="latest-version-title" style="text-decoration: none;">${latestVersion}</a>`
-                const manualUpdateInfo = `<a href="https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/使用教程#手动更新" target="_blanks" style="text-decoration: none;">manual update</a>`
+                const latestVersionInfo = `<a href="https://github.com/gaizhenbiao/allwinschatgpt/releases/latest" target="_blank" id="latest-version-title" style="text-decoration: none;">${latestVersion}</a>`
+                const manualUpdateInfo = `<a href="https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用教程#手动更新" target="_blanks" style="text-decoration: none;">manual update</a>`
                 if (localVersionTime == 0) {
                     const infoMessage = `Local version check failed. \nBut latest revision is ${latestVersionInfo}. \n\nWhen Update needed, \n- If you are using Docker, try to update package. \n- If you didn't use git, try ${manualUpdateInfo}.`
                     versionInfoElement.innerHTML = marked.parse(infoMessage, {mangle: false, headerIds: false});
@@ -131,14 +131,14 @@ async function updateLatestVersion() {
 }
 
 function getUpdateInfo() {
-    window.open('https://github.com/gaizhenbiao/chuanhuchatgpt/releases/latest', '_blank');
+    window.open('https://github.com/gaizhenbiao/allwinschatgpt/releases/latest', '_blank');
     closeUpdateToast();
 }
 
 var updateSpinner = null;
 
-function bgUpdateChuanhu() {
-    updateChuanhuBtn.click();
+function bgUpdateallwins() {
+    updateallwinsBtn.click();
     updatingInfoElement.innerText = i18n(updatingMsg_i18n);
     var updatingSpinner = document.getElementById('updating-spinner');
     try {
@@ -166,7 +166,7 @@ function closeUpdateToast() {
     if (updatingInfoElement.classList.contains('hideK') === false) {
         updatingInfoElement.classList.add('hideK');
     }
-    document.querySelector('.chuanhu-mask')?.remove();
+    document.querySelector('.allwins-mask')?.remove();
 }
 function manualCheckUpdate() {
     openUpdateToast();

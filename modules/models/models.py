@@ -89,9 +89,9 @@ def get_model(
                 access_key = os.environ.get("MINIMAX_API_KEY")
             model = MiniMax_Client(
                 model_name, api_key=access_key, user_name=user_name, system_prompt=system_prompt)
-        elif model_type == ModelType.ChuanhuAgent:
-            from .ChuanhuAgent import ChuanhuAgent_Client
-            model = ChuanhuAgent_Client(model_name, access_key, user_name=user_name)
+        elif model_type == ModelType.allwinsAgent:
+            from .allwinsAgent import allwinsAgent_Client
+            model = allwinsAgent_Client(model_name, access_key, user_name=user_name)
             msg = i18n("启用的工具：") + ", ".join([i.name for i in model.tools])
         elif model_type == ModelType.GooglePaLM:
             from .GooglePaLM import Google_PaLM_Client

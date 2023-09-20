@@ -601,8 +601,8 @@ def update_allwins():
 
 def add_source_numbers(lst, source_name = "Source", use_source = True):
     if use_source:
-#        return [f'[{idx+1}]\t "{item[0]}"\n{source_name}: {item[1]}' for idx, item in enumerate(lst)]
-        return [f'"{item[0]}"\n{source_name}: {item[1]}' for idx, item in enumerate(lst)]
+        return [f'[{idx+1}]\t "{item[0]}"\n: {item[1]}' for idx, item in enumerate(lst)]
+#        return [f'"{item[0]}"\n{source_name}: {item[1]}' for idx, item in enumerate(lst)]
     else:
 #        return [f'[{idx+1}]\t "{item}"' for idx, item in enumerate(lst)]
         return [f'"{item}"' for idx, item in enumerate(lst)]

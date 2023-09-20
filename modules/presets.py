@@ -43,9 +43,9 @@ CONCURRENT_COUNT = 100 # 允许同时使用的用户数量
 SIM_K = 5
 INDEX_QUERY_TEMPRATURE = 1.0
 
-allwins_TITLE = i18n("川虎Chat 🚀")
+allwins_TITLE = i18n("allwinsChat 🚀")
 
-allwins_DESCRIPTION = i18n("由Bilibili [土川虎虎虎](https://space.bilibili.com/29125536)、[明昭MZhao](https://space.bilibili.com/24807452) 和 [Keldos](https://github.com/Keldos-Li) 开发<br />访问川虎Chat的 [GitHub项目](https://github.com/GaiZhenbiao/allwinsChatGPT) 下载最新版脚本")
+allwins_DESCRIPTION = i18n("由Bilibili [土allwins虎虎](https://space.bilibili.com/29125536)、[明昭MZhao](https://space.bilibili.com/24807452) 和 [Keldos](https://github.com/Keldos-Li) 开发<br />访问allwinsChat的 [GitHub项目](https://github.com/GaiZhenbiao/allwinsChatGPT) 下载最新版脚本")
 
 
 ONLINE_MODELS = [
@@ -59,8 +59,8 @@ ONLINE_MODELS = [
     "gpt-4-32k",
     "gpt-4-32k-0314",
     "gpt-4-32k-0613",
-    "川虎助理",
-    "川虎助理 Pro",
+    "allwins助理",
+    "allwins助理 Pro",
     "GooglePaLM",
     "xmchat",
     "Azure OpenAI",

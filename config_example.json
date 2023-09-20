@@ -1,6 +1,4 @@
 {
-    // 各配置具体说明，见 [https://github.com/GaiZhenbiao/allwinsChatGPT/wiki/使用教程#配置-configjson]
-
     //== API 配置 ==
     "openai_api_key": "", // 你的 OpenAI API Key，一般必填，若空缺则需在图形界面中填入API Key
     "google_palm_api_key": "", // 你的 Google PaLM API Key，用于 Google PaLM 对话模型
@@ -42,12 +40,12 @@
     "usage_limit": 120, // 该 OpenAI API Key 的当月限额，单位：美元，用于计算百分比和显示上限
     "legacy_api_usage": false, // 是否使用旧版 API 用量查询接口（OpenAI现已关闭该接口，但是如果你在使用第三方 API，第三方可能仍然支持此接口）
 
-    //== 川虎助理设置 ==
-    "default_allwins_assistant_model": "gpt-4", //川虎助理使用的模型，可选gpt-3.5-turbo或者gpt-4等
-    "GOOGLE_CSE_ID": "", //谷歌搜索引擎ID，用于川虎助理Pro模式，获取方式请看 https://stackoverflow.com/questions/37083058/programmatically-searching-google-in-python-using-custom-search
-    "GOOGLE_API_KEY": "", //谷歌API Key，用于川虎助理Pro模式
-    "WOLFRAM_ALPHA_APPID": "", //Wolfram Alpha API Key，用于川虎助理Pro模式，获取方式请看 https://products.wolframalpha.com/api/
-    "SERPAPI_API_KEY": "", //SerpAPI API Key，用于川虎助理Pro模式，获取方式请看 https://serpapi.com/
+    //== allwins助理设置 ==
+    "default_allwins_assistant_model": "gpt-4", //allwins助理使用的模型，可选gpt-3.5-turbo或者gpt-4等
+    "GOOGLE_CSE_ID": "", //谷歌搜索引擎ID，用于allwins助理Pro模式，获取方式请看 https://stackoverflow.com/questions/37083058/programmatically-searching-google-in-python-using-custom-search
+    "GOOGLE_API_KEY": "", //谷歌API Key，用于allwins助理Pro模式
+    "WOLFRAM_ALPHA_APPID": "", //Wolfram Alpha API Key，用于allwins助理Pro模式，获取方式请看 https://products.wolframalpha.com/api/
+    "SERPAPI_API_KEY": "", //SerpAPI API Key，用于allwins助理Pro模式，获取方式请看 https://serpapi.com/
 
     //== 文档处理与显示 ==
     "latex_option": "default", // LaTeX 公式渲染策略，可选"default", "strict", "all"或者"disabled"

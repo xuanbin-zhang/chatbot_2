@@ -57,9 +57,9 @@ def reload_javascript():
     js += '<script async type="module" src="http://spin.js.org/spin.umd.js"></script><link type="text/css" href="https://spin.js.org/spin.css" rel="stylesheet" />'
     
     meta = """
-        <meta name="apple-mobile-web-app-title" content="川虎 Chat">
+        <meta name="apple-mobile-web-app-title" content="allwins Chat">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="application-name" content="川虎 Chat">
+        <meta name="application-name" content="allwins Chat">
         <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover'>
         <meta name="theme-color" content="#ffffff">
 

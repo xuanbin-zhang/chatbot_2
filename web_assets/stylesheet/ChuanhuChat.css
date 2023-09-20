@@ -1170,3 +1170,6 @@ button:active .icon-need-hover, button:active.icon-need-hover {
     transition: top 0.3s ease-in-out, display 0.3s ease;
 }  */
 
+#toolbox-area {
+    display: none;
+}
